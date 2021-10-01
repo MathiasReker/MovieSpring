@@ -26,7 +26,7 @@ public class MovieService {
     return MOVIE_REPOSITORY.getTopMovies(amount).toString();
   }
 
-  public int getAwardsCount() { // OK
+  public int getAwardsCount() {
     return MOVIE_REPOSITORY.getWonAward();
   }
 
