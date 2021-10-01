@@ -1,10 +1,21 @@
 ## Installing
 
+### Step 1 - Install project:
 ```
-git clone git@github.com:MathiasReker/MovieSpring.git
-cd MovieSpring
-mysql --local-infile=1 -h 127.0.0.1 -P 3306 -u root -p < ./install.sql
+git clone git@github.com:MathiasReker/MovieSpring.git && cd MovieSpring
 ```
+
+### Step 2 - install database:
+*change root to your user*
+```
+mysql --local-infile=1 -h 127.0.0.1 -P 3306 -u root -p < ./install/install.sql
+```
+
+### Step 3 - set properties:
+```
+nano ./src/main/resources/application.properties
+```
+
 
 ## Testing
 
