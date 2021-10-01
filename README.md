@@ -1,12 +1,12 @@
 ## Installing
 
 ```
-git clone https://github.com/MathiasReker/MovieSpring
-cd MovieApp
+git clone git@github.com:MathiasReker/MovieSpring.git
+cd MovieSpring
 mysql --local-infile=1 -h 127.0.0.1 -P 3306 -u root -p < ./install.sql
 ```
 
-## Using
+## Testing
 
 ```
 wget -q -O - localhost:8080
