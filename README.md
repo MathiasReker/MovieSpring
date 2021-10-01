@@ -6,7 +6,6 @@ git clone git@github.com:MathiasReker/MovieSpring.git && cd MovieSpring
 ```
 
 ### Step 2 - install database:
-*change root to your user*
 ```
 mysql --local-infile=1 -h 127.0.0.1 -P 3306 -u root -p < ./install/install.sql
 ```
