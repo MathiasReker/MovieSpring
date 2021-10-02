@@ -1,6 +1,6 @@
 ## Installing
 
-### Step 1 - Install project:
+### Step 1 - download project:
 ```
 git clone git@github.com:MathiasReker/MovieSpring.git && cd MovieSpring
 ```
@@ -15,6 +15,20 @@ mysql --local-infile=1 -h 127.0.0.1 -P 3306 -u root -p < ./install/install.sql
 nano ./src/main/resources/application.properties
 ```
 
+### Step 4 - build:
+```
+mvn clean install
+```
+
+### Step 5 - run:
+```
+mvn spring-boot:run
+```
+
+### Requirements
+```
+JDK 17
+```
 
 ## Testing
 
@@ -29,4 +43,4 @@ wget -q -O - localhost:8080/comedy
 
 ## Contributors
 
-* [@MathiasReker](https://github.com/MathiasReker)
+* [@MathiasReker](https://github.com/MathiasReker
