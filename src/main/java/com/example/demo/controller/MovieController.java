@@ -26,7 +26,7 @@ public class MovieController {
   @GetMapping("/getFirst")
   @ResponseBody
   public String getFirstMovie() {
-    return render("First movie", MOVIE_SERVICE.getMovies(1));
+    return render("First movie", MOVIE_SERVICE.getFirstMovies(1));
   }
 
   @GetMapping("/getRandom")
@@ -46,16 +46,16 @@ public class MovieController {
   @GetMapping("/howManyWonAnAward")
   @ResponseBody
   public String getAwardsCount() {
-    return render("How many won an award", String.valueOf(MOVIE_SERVICE.getAwardsCount()));
+    return render("How many won an award", String.valueOf(MOVIE_SERVICE.getWonAwardMovies()));
   }
 
   @GetMapping("/comedy")
   @ResponseBody
   public String getListComedyAwards() {
-    return render("Comedy", MOVIE_SERVICE.getListComedy());
+    return render("Comedy", MOVIE_SERVICE.getComedyAwardsMovies());
   }
 
-  private String render(String heading, String table) {
-    return "<h1>" + heading + "</h1>" + table;
+  private String render(String heading, String body) {
+    return "<h1>" + heading + "</h1>" + body;
   }
 }

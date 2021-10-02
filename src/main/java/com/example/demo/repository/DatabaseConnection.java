@@ -23,13 +23,14 @@ class DatabaseConnection {
       url = properties.getProperty("url");
       user = properties.getProperty("user");
       password = properties.getProperty("password");
-    } catch (IOException ex) {
-      ex.printStackTrace();
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
     }
     try {
+      assert url != null;
       this.connection = DriverManager.getConnection(url, user, password);
     } catch (SQLException e) {
-      e.printStackTrace();
+      System.out.println(e.getMessage());
     }
   }
 
@@ -42,7 +43,7 @@ class DatabaseConnection {
           instance = new DatabaseConnection();
         }
       } catch (SQLException e) {
-        e.printStackTrace();
+        System.out.println(e.getMessage());
       }
     }
 

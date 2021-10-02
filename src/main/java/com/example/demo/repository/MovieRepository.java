@@ -24,11 +24,11 @@ public class MovieRepository {
     return getMovies("SELECT * FROM movies ORDER BY popularity DESC LIMIT " + amount);
   }
 
-  public int getWonAward() {
+  public int getWonAwardMovies() {
     return getSqlResultAsInt("SELECT COUNT(*) FROM movies WHERE awards = \"yes\"");
   }
 
-  public List<Movie> getListComedy() {
+  public List<Movie> getComedyAwardsMovies() {
     return getMovies("SELECT * FROM movies WHERE subject = \"comedy\" AND awards = \"yes\"");
   }
 
@@ -55,7 +55,6 @@ public class MovieRepository {
                 resultSet.getInt("popularity"),
                 resultSet.getString("awards")));
       }
-
     } catch (SQLException e) {
       System.out.println(e.getMessage());
     }
@@ -75,8 +74,8 @@ public class MovieRepository {
       if (resultSet.next()) {
         result = resultSet.getInt(1);
       }
-    } catch (SQLException sq) {
-      System.out.println(sq.getMessage());
+    } catch (SQLException e) {
+      System.out.println(e.getMessage());
     }
 
     return result;

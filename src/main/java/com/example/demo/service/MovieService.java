@@ -14,7 +14,7 @@ public class MovieService {
     MOVIE_REPOSITORY = movieRepository;
   }
 
-  public String getMovies(int amount) {
+  public String getFirstMovies(int amount) {
     return MOVIE_REPOSITORY.getFirstMovies(amount).toString();
   }
 
@@ -26,11 +26,11 @@ public class MovieService {
     return MOVIE_REPOSITORY.getTopMovies(amount).toString();
   }
 
-  public int getAwardsCount() {
-    return MOVIE_REPOSITORY.getWonAward();
+  public int getWonAwardMovies() {
+    return MOVIE_REPOSITORY.getWonAwardMovies();
   }
 
-  public String getListComedy() {
-    return MOVIE_REPOSITORY.getListComedy().toString();
+  public String getComedyAwardsMovies() {
+    return MOVIE_REPOSITORY.getComedyAwardsMovies().toString();
   }
 }
