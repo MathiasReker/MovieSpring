@@ -43,4 +43,4 @@ wget -q -O - localhost:8080/comedy
 
 ## Contributors
 
-* [@MathiasReker](https://github.com/MathiasReker
+* [@MathiasReker](https://github.com/MathiasReker)
