@@ -17,7 +17,7 @@ nano ./src/main/resources/application.properties
 
 ### Step 4 - build:
 ```
-mvn clean install
+mvn install
 ```
 
 ### Step 5 - run:
