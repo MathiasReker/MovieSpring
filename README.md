@@ -25,7 +25,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-### Requirements
+## Requirements
 ```
 JDK 17
 ```
